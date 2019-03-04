@@ -1,0 +1,175 @@
+<head>
+  <!-- Expand the number of characters we can use in the document beyond basic ASCII 🎉 -->
+  <meta charset="utf-8">
+  <!-- Make it responsive to small screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.0.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+</head>
+
+
+
+<!-- Page Content -->
+<div class="container montserrat">
+
+  <!-- Portfolio Item Heading -->
+  <h1 class="my-4"><%= @user.first_name %> <%= @user.last_name %>
+    <p><small><%= @user.current_position %> at <%= @user.current_employer %></small></p>
+  </h1>
+
+  <!-- Portfolio Item Row -->
+  <div class="row">
+
+    <div class="col-md-3">
+      <img class="img-fluid" src="<%= @user.profile_picture_link %>" alt="width: 400px height: 400px">
+    </div>
+
+
+    <div class="col-md-4">
+    <div class="list-group" id="list-tab" role="tablist">
+      <a class="list-group-item list-group-item-action active" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
+      <a class="list-group-item list-group-item-action" id="list-employment-list" data-toggle="list" href="#list-employment" role="tab" aria-controls="employment">Employment</a>      
+      <a class="list-group-item list-group-item-action" id="list-service-list" data-toggle="list" href="#list-service" role="tab" aria-controls="service">Service History</a>
+      <a class="list-group-item list-group-item-action" id="list-contact-list" data-toggle="list" href="#list-contact" role="tab" aria-controls="contact">Contact</a>
+      <a href="<%= @user.linkedin_profile %>" title="LinkedIn" class="btn btn-linkedin btn-lg"><i class="fab fa-linkedin"></i></a>
+    </div>
+    </div>
+    <div class="col-md-5">
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+        <ul class="list-unstyled">
+          <li>
+            Class of <%= @user.class_year %>
+            <p></p>
+          </li>
+          <li>
+            Preferred First Name
+            <p><small><%= @user.preferred_name %></small></p>
+          </li>  
+          <li>
+            Current Home City
+            <p><small><%= @user.current_city %></small></p>
+          </li>         
+          <li>
+            Current Home Country
+            <p><small><%= @user.current_country %></small></p>
+          </li>            
+        </ul>
+      </div>
+
+      <div class="tab-pane fade" id="list-employment" role="tabpanel" aria-labelledby="list-employment-list">
+        <ul class="list-unstyled">
+          <li>
+            Current Employer
+            <p><small><%= @user.current_employer %></small></p>
+          </li>
+          <li>
+            Current Position
+            <p><small><%= @user.current_position %></small></p>
+          </li>  
+          <li>
+            Current Position Summary
+            <p><small><%= @user.current_position_description %></small></p>
+          </li>   
+          <li>
+            Current Position Job Function
+            <p><small><%= @user.current_position_function %></small></p>
+          </li>            
+        </ul>
+      </div>
+
+      
+      <div class="tab-pane fade" id="list-service" role="tabpanel" aria-labelledby="list-service-list">
+        <ul class="list-unstyled">
+          <li>
+            Nationality
+            <p><small><%= @user.nationality %></small></p>
+          </li>
+          <li>
+            Service Branch
+            <p><small><%= @user.service_branch %></small></p>
+          </li>          
+        </ul>
+        
+        
+      </div>
+      <div class="tab-pane fade" id="list-contact" role="tabpanel" aria-labelledby="list-contact-list">
+        <ul class="list-unstyled">
+          <li>
+            Preferred Email
+            <p><small><%= @user.preferred_email %></small></p>
+          </li>
+    
+        </ul>        
+        
+        
+      </div>
+
+    </div>
+    </div>
+
+
+
+    
+
+  </div>
+  <!-- /.row -->
+
+  <!-- Similar Profiles Row -->
+  <h3 class="mb-4 mt-5">Similar Profiles</h3>
+
+  <div class="row">
+
+    <div class="col-md-2 col-sm-6 mb-4">
+      <a href="#">
+            <img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/6/65/Baby.tux-800x800.png" alt="">
+          </a>
+      <h5 class="text-center">Penguin McGregory</h5>
+      <h6 class="text-center pt-0 ellipsis">Penguin in a Tux</h6>   
+    </div>
+
+    <div class="col-md-2 col-sm-6 mb-4">
+      <a href="#">
+            <img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/6/65/Baby.tux-800x800.png" alt="">
+          </a>
+      <h5 class="text-center">Penguin McGregory</h5>
+      <h6 class="text-center pt-0 ellipsis">Penguin in a Tux</h6>   
+    </div>
+
+    <div class="col-md-2 col-sm-6 mb-4">
+      <a href="#">
+            <img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/6/65/Baby.tux-800x800.png" alt="">
+          </a>
+      <h5 class="text-center">Penguin McGregory</h5>
+      <h6 class="text-center pt-0 ellipsis">Penguin in a Tux</h6>   
+    </div>
+
+    <div class="col-md-2 col-sm-6 mb-4">
+      <a href="#">
+            <img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/6/65/Baby.tux-800x800.png" alt="">
+          </a>
+      <h5 class="text-center">Penguin McGregory</h5>
+      <h6 class="text-center pt-0 ellipsis">Penguin in a Tux</h6>   
+    </div>
+    
+    <div class="col-md-2 col-sm-6 mb-4">
+      <a href="#">
+            <img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/6/65/Baby.tux-800x800.png" alt="">
+          </a>
+      <h5 class="text-center">Penguin McGregory</h5>
+      <h6 class="text-center pt-0 ellipsis">Penguin in a Tux</h6>   
+    </div>
+    
+    <div class="col-md-2 col-sm-6 mb-4">
+      <a href="#">
+            <img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/6/65/Baby.tux-800x800.png" alt="">
+          </a>
+      <h5 class="text-center">Penguin McGregory</h5>
+      <h6 class="text-center pt-0 ellipsis">Penguin in a Tux</h6>   
+    </div> 
+
+  </div>
+  <!-- /.row -->
+
+</div>
+<!-- /.container -->
